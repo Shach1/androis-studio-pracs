@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">test</string>
+        <!--for MainActivity.java-->
+    <string name="a1_Activity_success">Activity успешно функционирует!</string>
+    <string name="a1_switch_activity_prog">Переход к новому Activity при помощи программного метода</string>
+    <string name="a1_switch_activity_dec">Переход к новому Activity при помощи делкративного метода</string>
+    <string name="a1_fill_all_fields">Заполните все поля!</string>
+
+        <!--for activity_main.xml-->
+    <string name="enter_your_details">Введите ваши данные</string>
+    <string name="declarate_button">Декларативная кнопка</string>
+    <string name="program_button">Программная кнопка</string>
+    <string name="full_name">ФИО</string>
+    <string name="group_number">Номер группы</string>
+    <string name="age">Возраст</string>
+    <string name="desired_grade">Желаемая оценка</string>
+
+        <!--for activity_second.xml-->
+    <string name="come_back">Вернуться назад</string>
+    
+        <!--for SecondActivity.java-->
+    <string name="a2_student">Студент: </string>
+    <string name="a2_group">Группа: </string>
+    <string name="a2_age">Возраст: </string>
+    <string name="a2_mark">Желаемая оценка: </string>
 </resources>
