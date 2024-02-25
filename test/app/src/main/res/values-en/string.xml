@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">test</string>
+    <!--for MainActivity.java-->
+    <string name="a1_Activity_success">Activity is functioning successfully!</string>
+    <string name="a1_switch_activity_prog">Transition to a new Activity using the programmatic method</string>
+    <string name="a1_switch_activity_dec">Transition to a new Activity using the delctive method</string>
+    <string name="a1_fill_all_fields">Fill in all the fields!</string>
+
+    <!--for activity_main.xml-->
+    <string name="enter_your_details">Enter your details</string>
+    <string name="declarate_button">Declarative button</string>
+    <string name="program_button">Software button</string>
+    <string name="full_name">Full name</string>
+    <string name="group_number">Group number</string>
+    <string name="age">Age</string>
+    <string name="desired_grade">Desired grade</string>
+
+    <!--for activity_second.xml-->
+    <string name="come_back">Come back</string>
+
+    <!--for SecondActivity.java-->
+    <string name="a2_student">Student: </string>
+    <string name="a2_group">Group: </string>
+    <string name="a2_age">Age: </string>
+    <string name="a2_mark">Desired grade: </string>
+</resources>
