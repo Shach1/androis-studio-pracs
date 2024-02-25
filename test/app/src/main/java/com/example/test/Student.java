@@ -1,9 +1,8 @@
 package com.example.test;
 
-import android.os.Parcelable;
 
 import java.io.Serializable;
-import java.util.SplittableRandom;
+
 
 public class Student implements Serializable
 {
