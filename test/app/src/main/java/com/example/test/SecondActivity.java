@@ -23,7 +23,7 @@ public class SecondActivity extends AppCompatActivity {
         Bundle arguments = getIntent().getExtras();
         if(arguments != null)
         {
-            Student student = (Student) arguments.getSerializable("our_student");
+            Student student = arguments.getParcelable(Student.class.getSimpleName());
             String name = student.getName();
             String group = student.getGroup();
             int age = student.getAge();

@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity
             Student student = new Student(name, age, group, mark);
             Intent intent = new Intent(this, SecondActivity.class);
             //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.putExtra("our_student", student);
+            intent.putExtra(Student.class.getSimpleName(), student);
             startActivity(intent);
         }
         else Toast.makeText(this, R.string.a1_fill_all_fields, Toast.LENGTH_SHORT).show();
