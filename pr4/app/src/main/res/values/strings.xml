@@ -3,4 +3,14 @@
     <string name="enter_name">Enter your name</string>
     <string name="enter_surname">Enter your surname</string>
     <string name="next">Next!</string>
+    <string name="name">"Name: "</string>
+    <string name="surname">"Surname: "</string>
+    <string name="enter_information">Enter information</string>
+    <string name="alert_canceled">"You have not entered all the information!!!"</string>
+    <string name="alert_ok">Data saved successfully</string>
+
+    <string name="a3_day">Enter a day to visit</string>
+    <string name="a3_time">Enter time to visit</string>
+    <string name="a3_comment">Enter a comment</string>
+    <string name="ok">OK</string>
 </resources>
