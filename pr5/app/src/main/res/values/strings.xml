@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">pr5</string>
+    <string name="app_name">Practice 5</string>
+    <string-array name="fruits">
+        <item>Яблоко</item>
+        <item>Груша</item>
+        <item>Банан</item>
+        <item>Апельсин</item>
+        <item>Клубника</item>
+        <item>Ананас</item>
+        <item>Виноград</item>
+        <item>Манго</item>
+        <item>Киви</item>
+        <item>Авокадо</item>
+    </string-array>
 </resources>

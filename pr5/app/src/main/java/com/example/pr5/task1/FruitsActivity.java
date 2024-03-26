@@ -16,18 +16,19 @@ import java.util.Collections;
 
 public class FruitsActivity extends AppCompatActivity {
 
-    private String[] FRUITS = {"Яблоко", "Груша", "Банан", "Апельсин",
-            "Клубника", "Ананас", "Виноград", "Манго", "Киви", "Авокадо"};
+    private String[] FRUITS;
 
     private ArrayList<String> fruits = new ArrayList<String>();
     private ArrayList<String> selectedFruits = new ArrayList<String>();
-    ListView fruitList;
-    ArrayAdapter<String> fruitsAdapter;
+    private ListView fruitList;
+    private ArrayAdapter<String> fruitsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fruits);
+
+        FRUITS = getResources().getStringArray(R.array.fruits);
 
         //Копируем в ArrayList fruits массив строк FRUITS
         Collections.addAll(fruits, FRUITS);
