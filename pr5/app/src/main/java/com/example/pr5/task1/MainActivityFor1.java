@@ -26,31 +26,29 @@ public class MainActivityFor1 extends AppCompatActivity {
         CategoryListView.setAdapter(CategoryAdapter);
 
         CategoryListView.setOnItemClickListener(
-                new AdapterView.OnItemClickListener()
-                {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+                (parent, view, position, id) -> {
+                    switch (position)
                     {
-                        switch (position)
+                        case 0:
                         {
-                            case 0:
-                            {
-                                Intent intent = new Intent(MainActivityFor1.this, VegetableActivity.class);
-                                startActivity(intent);
-                                break;
-                            }
-                            case 1:
-                            {
-                                Intent intent = new Intent(MainActivityFor1.this, FruitsActivity.class);
-                                startActivity(intent);
-                                break;
-                            }
-                            case 2:
-                                Intent intent = new Intent(MainActivityFor1.this, BerriesActivity.class);
-                                startActivity(intent);
-                                break;
+                            Intent intent = new Intent(MainActivityFor1.this, VegetableActivity.class);
+                            startActivity(intent);
+                            break;
+                        }
+                        case 1:
+                        {
+                            Intent intent = new Intent(MainActivityFor1.this, FruitsActivity.class);
+                            startActivity(intent);
+                            break;
+                        }
+                        case 2:
+                        {
+                            Intent intent = new Intent(MainActivityFor1.this, BerriesActivity.class);
+                            startActivity(intent);
+                            break;
                         }
                     }
-                });
+                }
+        );
     }
 }
