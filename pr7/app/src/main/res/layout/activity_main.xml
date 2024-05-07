@@ -2,20 +2,48 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <Button
-        android:id="@+id/but_next_track"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next Track"
+        android:id="@+id/button_task1"
+        android:layout_width="226dp"
+        android:layout_height="52dp"
+        android:text="@string/task_1"
+        android:onClick="onFirstTaskActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036"
-        android:onClick="onNextSong"/>
+        app:layout_constraintVertical_bias="0.777" />
+
+    <Button
+        android:id="@+id/button_task2"
+        android:layout_width="226dp"
+        android:layout_height="52dp"
+        android:text="@string/task_2"
+        android:onClick="onSecondTaskActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.891" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TopPageText"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

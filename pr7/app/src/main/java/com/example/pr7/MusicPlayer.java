@@ -17,7 +17,7 @@ public class MusicPlayer extends Service {
     public void onCreate() {
         super.onCreate();
 
-        mediaPlayer = MediaPlayer.create(this, MainActivity.songs.get(MainActivity.currentSong));
+        mediaPlayer = MediaPlayer.create(this, Activity1.songs.get(Activity1.currentSong));
         mediaPlayer.setVolume(100, 100);
         mediaPlayer.setLooping(true);
     }
