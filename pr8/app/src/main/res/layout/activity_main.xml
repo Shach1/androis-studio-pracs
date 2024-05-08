@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <Button
+        android:id="@+id/btStartSerial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Начать последовательные задачи"
+        android:onClick="onSerial"/>
+
+    <Button
+        android:id="@+id/btStartParallel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Начать параллельные задачи"
+        android:onClick="onParallel"/>
+    <Button
+        android:id="@+id/btJustClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="КЛИК"
+        android:onClick="onJustClick"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Проверка" />
+    <Button
+        android:id="@+id/btDisplayDog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Показать собачку"
+        android:onClick="onDisplayDog"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+</LinearLayout>
