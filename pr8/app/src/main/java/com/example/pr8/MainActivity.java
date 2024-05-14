@@ -1,24 +1,20 @@
 package com.example.pr8;
 
 
-
-import static com.example.pr8.image.JsonToImg.*;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
+import android.graphics.Bitmap;
 import android.os.StrictMode;
 import android.util.Log;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 import androidx.work.WorkManager;
 import com.example.pr8.image.JsonToImg;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private Data data;
     private OneTimeWorkRequest workRequest1, workRequest2, workRequest3; //для 3 последовательных задач
     private OneTimeWorkRequest workRequest4, workRequest5; //для 2 параллельных задач
-    private OneTimeWorkRequest workRequest6; //для задачи с изображением
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,21 +94,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onDisplayDog(View view)
     {
-        Map<String, Object> map = new HashMap<>();
-        map.put("imageView", imageView);
-
-        data = new Data.Builder()
-                //.putAll(map)
-                .putString("firstUrl", jsonUrl)
-                .build();
-
-        workRequest6 = new OneTimeWorkRequest.Builder(JsonToImg.class)
-                .setInputData(data)
-                .build();
-        WorkManager.getInstance(getApplicationContext()).beginWith(workRequest6).enqueue();
-        //Toast.makeText(this, getGogUrl(jsonUrl), Toast.LENGTH_SHORT).show();
-        //imageView.setImageBitmap(JsonToImg.getImageFromUrl(getGogUrl(jsonUrl)));
+        new Thread(() -> {
+            final Bitmap bitmap = JsonToImg.getImageFromUrl(JsonToImg.getDogUrl(jsonUrl));
+            runOnUiThread(() -> imageView.setImageBitmap(bitmap));
+        }).start();
     }
-
-
 }
