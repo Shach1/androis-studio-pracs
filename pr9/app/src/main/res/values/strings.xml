@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Practice 9</string>
+    <string name="label_internal">Внутренее хранилище</string>
+    <string name="label_external">Внешнее хранилище</string>
+    <string name="inter_content_file">Введите содержимое файла</string>
+    <string name="inter_file_name">Введите название файла</string>
+    <string name="delete">Удалить</string>
+    <string name="save">Сохранить</string>
+    <string name="add_content">Добавить содержимое в файл</string>
+    <string name="read">Прочитать</string>
+    <string name="file_content">Содержимое файла</string>
 </resources>
