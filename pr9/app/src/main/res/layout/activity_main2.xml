@@ -72,4 +72,16 @@
         android:textSize="26sp"
         android:textStyle="bold"/>
 
+    <Button
+        android:id="@+id/btAddContentToFile"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:onClick="onAddContent"
+        android:text="@string/add_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFileContent"
+        app:layout_constraintVertical_bias="0.214" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

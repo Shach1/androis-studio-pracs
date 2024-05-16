@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "pr9"
 include(":app")
+include(":pr9_2")

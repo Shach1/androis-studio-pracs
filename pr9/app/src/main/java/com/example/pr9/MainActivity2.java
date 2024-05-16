@@ -1,20 +1,14 @@
 package com.example.pr9;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -56,9 +50,10 @@ public class MainActivity2 extends AppCompatActivity {
         if (checkFileName() && checkFileContent())
         {
             File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
-            if (!storageDir.exists()) {
+            if (!storageDir.exists())
+            {
                 // Создаем директорию, если она не существует
-                storageDir.mkdir();
+                storageDir.mkdirs();
             }
             File file = new File(storageDir, fileName);
             try {
@@ -71,14 +66,42 @@ public class MainActivity2 extends AppCompatActivity {
                         writer.append(fileContent);
                         writer.flush();
                         writer.close();
-                        Toast.makeText(this,"Файл успешно создан!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Файл успешно создан!", Toast.LENGTH_SHORT).show();
+                        fileNameEditText.setText("");
+                        fileContentEditText.setText("");
                     }
                 }
+                else Toast.makeText(this, "Файл с таким именем уже существует", Toast.LENGTH_SHORT).show();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         else Toast.makeText(context, "Введите название файла и информацию!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onAddContent(View view) {
+        if (checkFileName() && checkFileContent()) {
+            File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+            if (!storageDir.exists()) {
+                Toast.makeText(this, "Директория не существует", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            File file = new File(storageDir, fileName);
+            try {
+                if (file.exists()) {
+                    // Записываем данные в файл
+                    FileWriter writer = new FileWriter(file, true);
+                    writer.append("\n" + fileContent);
+                    writer.flush();
+                    writer.close();
+                    Toast.makeText(this, "Файл успешно дозаписан!", Toast.LENGTH_SHORT).show();
+                    fileNameEditText.setText("");
+                    fileContentEditText.setText("");
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else Toast.makeText(context, "Введите название файла и информацию!", Toast.LENGTH_SHORT).show();
     }
 
     public void onDelete(View view) {
@@ -92,9 +115,12 @@ public class MainActivity2 extends AppCompatActivity {
                 if (deleted)
                 {
                     // Файл успешно удален
-                    Toast.makeText(MainActivity2.this,"File deleted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity2.this,"Файл успешно удален!", Toast.LENGTH_SHORT).show();
+                    fileNameEditText.setText("");
+
                 }
             }
+            else Toast.makeText(MainActivity2.this,"Файла с таким именем не существует", Toast.LENGTH_SHORT).show();
         }
         else Toast.makeText(context, "Введите название файла!", Toast.LENGTH_SHORT).show();
     }

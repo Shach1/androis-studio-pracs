@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Practice 9_2</string>
+    <string name="label_external">Внешнее хранилище 2</string>
+    <string name="inter_file_name">Введите название файла</string>
+    <string name="read">Прочитать</string>
+    <string name="file_content">Содержимое файла</string>
+</resources>
