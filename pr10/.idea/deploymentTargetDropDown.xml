@@ -5,6 +5,12 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="database">
+        <State />
+      </entry>
+      <entry key="database_example">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

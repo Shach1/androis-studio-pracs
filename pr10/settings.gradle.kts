@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "pr10"
 include(":app")
+include(":database_example")
+include(":database")
