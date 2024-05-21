@@ -32,7 +32,8 @@ public class LessonAdapter extends RecyclerView.Adapter<LessonAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return lessons.size();
+        if (lessons != null) return lessons.size();
+        return 0;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder

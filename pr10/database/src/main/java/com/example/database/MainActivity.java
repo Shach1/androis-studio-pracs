@@ -75,7 +75,17 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        LessonCount = lessonList.get(lessonList.size() - 1).getId();
+        if (lessonList == null) {LessonCount = 0;}
+        else
+        {
+            if(lessonList.size() != 0)
+            {
+                LessonCount = lessonList.get(lessonList.size() - 1).getId();
+            }
+            else {
+                LessonCount = 0;
+            }
+        }
         Lesson lesson = new Lesson(LessonCount + 1, numberPair, teacher, subject, classroom, time);
         if (dbHelper.addLesson(lesson))
         {

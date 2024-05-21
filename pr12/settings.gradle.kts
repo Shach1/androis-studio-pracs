@@ -13,6 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "pr10"
+rootProject.name = "pr12"
 include(":app")
-include(":database")
